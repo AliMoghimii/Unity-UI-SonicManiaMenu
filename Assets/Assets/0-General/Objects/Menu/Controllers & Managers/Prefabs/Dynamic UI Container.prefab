@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1100731006461932181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5888889021188946292}
+  m_Layer: 5
+  m_Name: Anchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5888889021188946292
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100731006461932181}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1469175839011788772}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 659, y: -272}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2405903711345989390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2739582578233695620}
+  - component: {fileID: 3289712013053058216}
+  - component: {fileID: 3660105103368340803}
+  m_Layer: 5
+  m_Name: Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2739582578233695620
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405903711345989390}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1469175839011788772}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -50, y: 50.01001}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3289712013053058216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405903711345989390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78384c6006335044b807a38a9b61a5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixelDistanceToDetect: 20
+  swipeSpeed: 0
+  maxSwipeSpeed: 100
+  swipeSpeedDecreaseRate: 0
+  elapsedTime: 0
+  SwipeLimitAnchor: {fileID: 0}
+  allowUpSwipe: 1
+  UpTargetVector: {x: 0, y: 1, z: 0}
+  allowDownSwipe: 1
+  DownTargetVector: {x: 0, y: -1, z: 0}
+  allowRightSwipe: 1
+  RightTargetVector: {x: 1, y: 0, z: 0}
+  allowLeftSwipe: 1
+  LeftTargetVector: {x: -1, y: 0, z: 0}
+  fingerDown: 0
+  fingerReleased: 0
+--- !u!114 &3660105103368340803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405903711345989390}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9ec2dadce14e54db3638acb16a3428, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pixelDistanceToDetect: 20
+  swipeSpeed: 500
+  swipeSpeedMultiplyRate: 5
+  swipeSpeedDecreaseRate: 10
+  swipeSpeedTemp: 0
+  SwipeLimitAnchor: {fileID: 5888889021188946292}
+  maxDistanceToRelease: 200
+  vectorDirectionScale: 50
+  allowUpSwipe: 1
+  UpTargetVector: {x: 1, y: 1, z: 0}
+  allowDownSwipe: 1
+  DownTargetVector: {x: -1, y: -1, z: 0}
+  allowRightSwipe: 0
+  RightTargetVector: {x: 1, y: 0, z: 0}
+  allowLeftSwipe: 0
+  LeftTargetVector: {x: -1, y: 0, z: 0}
+  fingerDown: 0
+  DebugMode: 1
+  debugPixelDistanceToDetect: 20
+  debugSwipeSpeed: 500
+  debugSwipeSpeedMultiplyRate: 5
+  debugSwipeSpeedDecreaseRate: 10
+  debugVectorDirectionScale: 50
+--- !u!1 &7016494304200794590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469175839011788772}
+  - component: {fileID: 4497875101222827919}
+  m_Layer: 5
+  m_Name: ScrollMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1469175839011788772
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016494304200794590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2739582578233695620}
+  - {fileID: 5888889021188946292}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4497875101222827919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7016494304200794590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d403f984e7ac2fb4aa0ed601396ae1f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonController: {fileID: 2739582578233695620}
+  Button:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentButton: 1
+  coolDownUntilNextSwitch: 0.27
+  movementDirection: {x: 1, y: 0, z: 0}
+  ScrollDirection: 1
+  switchSpeed: 570
+  canSwitchTarget: 1
+  allowInput: 1
